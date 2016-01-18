@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Research Scripts </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+
+        <style>
+
+        .commands {
+            background-color: #eee;
+            height: 600px;
+        }
+        .console {
+            background-color: #57576F;
+            height: 600px;
+            padding: 10px;
+            font-family: monospace;
+            overflow: scroll;
+        }
+        .output {
+            height: 150px;
+            overflow: scroll;
+            background: #f8f8f8;
+            color: #008000;
+        }
+        .console .log-message.default {
+            color: #eee;
+        }
+        .console .log-message.success {
+            color: #B9F7CF;
+        }
+        .console .log-message.danger {
+            color: #FDA0A0;
+        }
+        .console .log-message.warning {
+            color: #F7FDA0;
+        }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 commands">
+                <h3> Commands</h3>
+                <p>Use commands available below to restructure data.</p>
+                <button id="btnLoad" class="btn btn-sm btn-default btn-block">Load data</button>
+                <button id="btnReset" class="btn btn-sm btn-default btn-block">Reset data</button>
+
+            </div>
+            <div class="col-xs-9 console">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 output">
+                CSV output will appear here....
+            </div>
+        </div>
+    </div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        var full_data;
+        var full_click_track;
+        var short_outcome;
+        var users = {};
+        var newUserData = [];
+        var lineNumber = 0;
+        function log (text, type) {
+            lineNumber++;
+            $('.console').append('<div class="log-message ' + type + '" data-line="' + lineNumber + '">' + lineNumber + ': ' + text + '<div>');
+        }
+        function reset (){
+            full_data = [];
+            full_click_track = [];
+            short_outcome = [];
+            users = [];
+            log('Variables have been reset to empty', 'default');
+        }
+
+        function getFullData () {
+            log('Getting data full_data.json', 'default');
+            $.ajax({
+                method : 'GET',
+                url : 'full_data.json'
+            }).done(function(result){
+                console.log(result);
+                full_data = result;
+                log('Received data full_data.json.' + result.length + ' rows.', 'success');
+            }).fail(function(){
+                log('Failed to receive full_data.json', 'danger');
+            })
+        }
+
+        function getLogs () {
+            log('Getting data full_click_track.json', 'default');
+            $.ajax({
+                method : 'GET',
+                url : 'full_click_track.json'
+            }).done(function(result){
+                console.log(result);
+                full_click_track = result;
+                log('Received data full_click_track.json.' + result.length + ' rows.', 'success');
+                refactorLogstoStudents();
+            }).fail(function(){
+                log('Failed to receive full_click_track.json', 'danger');
+            })
+        }
+
+        function refactorLogstoStudents () {
+            var row;
+            var i;
+            var user;
+            var total;
+            var uniqueTotal;
+            for(i= 0; i < full_click_track.length; i++){
+                row = full_click_track[i];
+                user = users[row.student];
+                if (!user){
+                    user = {
+                        id : row.student,
+                        totalLow : 0,
+                        totalHigh: 0,
+                        totalUniqueLow: 0,
+                        totalUniqueHigh: 0,
+                        totalNoteLength : 0,
+                        relevancyRatio : 0.0, // percentage of high
+                        uniqueRelevancyRatio: 0.0,
+                        temp : {
+                            usedURLs : []
+                        }
+                    }
+                    users[row.student] = user;
+                }
+                if(row.Relevancy === 'Low'){
+                    user.totalLow++
+                }
+                if(row.Relevancy === 'High'){
+                    user.totalHigh++
+                }
+                if(user.temp.usedURLs.indexOf(row.url) === -1 ){
+                    if(user.NOTE !== 'NULL'){
+                        user.totalNoteLength = user.totalNoteLength + row.NOTE.length;
+                    }
+                    if(row.Relevancy === 'Low'){
+                        user.totalUniqueLow++
+                    }
+                    if(row.Relevancy === 'High'){
+                        user.totalUniqueHigh++
+                    }
+                    user.temp.usedURLs.push(row.url);
+                }
+                total = user.totalHigh + user.totalLow;
+                user.relevancyRatio = user.totalHigh / total;
+
+                uniqueTotal = user.totalUniqueHigh + user.totalUniqueLow;
+                user.uniqueRelevancyRatio = user.totalUniqueHigh / uniqueTotal;
+
+            }
+            buildUserData();
+        }
+
+        function buildUserData (){
+            var i;
+            var oldRow;
+            var newRow = {};
+            var user;
+            for (i = 0; i < full_data.length; i++){
+                oldRow = full_data[i];
+                if(users[oldRow.StudentID]){
+                    user = users[oldRow.StudentID];
+                    newRow.student = oldRow.StudentID;
+                    newRow.totalLow = user.totalLow;
+                    newRow.totalHigh= user.totalHigh;
+                    newRow.totalUniqueLow= user.totalUniqueLow;
+                    newRow.totalUniqueHigh= user.totalUniqueHigh;
+                    newRow.totalNoteLength= user.totalNoteLength;
+                    newRow.relevancyRatio = user.relevancyRatio;
+                    newRow.uniqueRelevancyRatio = user.uniqueRelevancyRatio;
+                    newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
+                }
+                newUserData.push(newRow);
+            }
+            console.log('New: ', newUserData);
+            outputCSV(newUserData);
+        }
+
+        function outputCSV (data) {
+            var i;
+            var row;
+            var text = '';
+            var header = '';
+            for (i = 0; i < data.length; i++) {
+                row = data[i];
+                for (var prop in row) {
+                    if(i === 0){
+                        header += ',' + prop;
+                    }
+                    text += ',' + row[prop];
+                    console.log("obj." + prop + " = " + row[prop]);
+                }
+                text += '\n';
+            }
+            $('.output').text(header + '\n' + text);
+
+
+        }
+
+
+        $(document).ready(function(){
+            log('Ready to go. ', 'default');
+            $('#btnLoad').click(function(){
+                getFullData();
+                getLogs();
+            });
+            $('#btnReset').click(function(){
+                reset();
+            });
+        });
+    </script>
+
+
+    </body>
+</html>

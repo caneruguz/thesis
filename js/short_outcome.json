@@ -1,0 +1,2602 @@
+[
+  {
+    "StudentID": 3058,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 31
+  },
+  {
+    "StudentID": 3439,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3486,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3802,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 23
+  },
+  {
+    "StudentID": 3803,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3805,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 1,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3806,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 1,
+    "TotalScore": 24
+  },
+  {
+    "StudentID": 3809,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3810,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3812,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3813,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3814,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3818,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3819,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3820,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 9
+  },
+  {
+    "StudentID": 3821,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3823,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3827,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 594,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3828,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 594,
+    "Step1Q1A": 99,
+    "Step1Q1B": 99,
+    "Step1Q1C": 99,
+    "TotalScore": 99
+  },
+  {
+    "StudentID": 3829,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 594,
+    "Step1Q1A": 2,
+    "Step1Q1B": 3,
+    "Step1Q1C": 2,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3830,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 594,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 1,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3835,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 594,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3837,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 6
+  },
+  {
+    "StudentID": 3838,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 3,
+    "Step1Q1C": 1,
+    "TotalScore": 37
+  },
+  {
+    "StudentID": 3839,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3840,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3841,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3843,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3847,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 586,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3848,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 99,
+    "Step1Q1B": 99,
+    "Step1Q1C": 99,
+    "TotalScore": 99
+  },
+  {
+    "StudentID": 3849,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3850,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3851,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3855,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3857,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 3,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3858,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 595,
+    "Step1Q1A": 99,
+    "Step1Q1B": 99,
+    "Step1Q1C": 99,
+    "TotalScore": 99
+  },
+  {
+    "StudentID": 3859,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3861,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3862,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 11
+  },
+  {
+    "StudentID": 3863,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 3,
+    "Step1Q1B": 3,
+    "Step1Q1C": 1,
+    "TotalScore": 29
+  },
+  {
+    "StudentID": 3864,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3866,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3867,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3870,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 24
+  },
+  {
+    "StudentID": 3871,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 2
+  },
+  {
+    "StudentID": 3873,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3875,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3876,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 1,
+    "TotalScore": 35
+  },
+  {
+    "StudentID": 3877,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3878,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3879,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3882,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 11
+  },
+  {
+    "StudentID": 3885,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 1,
+    "TotalScore": 9
+  },
+  {
+    "StudentID": 3888,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 580,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3891,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3892,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3893,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 5
+  },
+  {
+    "StudentID": 3897,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3898,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3901,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 586,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3904,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3912,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3913,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 5
+  },
+  {
+    "StudentID": 3916,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3917,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 27
+  },
+  {
+    "StudentID": 3920,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3921,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3922,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3924,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3926,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 600,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3929,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3934,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 592,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3937,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 596,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 2,
+    "TotalScore": 26
+  },
+  {
+    "StudentID": 3942,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3945,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3946,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3948,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3950,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3951,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3952,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3954,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3955,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3958,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3960,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3962,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3963,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3967,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 618,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3970,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3971,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3973,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 586,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3975,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3976,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3978,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3979,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3980,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 623,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3981,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3986,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 623,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3988,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3989,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 624,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3993,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 623,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4001,
+    "FacID": 14,
+    "Semester": 4,
+    "CaseAssignment1": 628,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4013,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4015,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4020,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4023,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4024,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4025,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4043,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 631,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4044,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4049,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4050,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4052,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4053,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4054,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4055,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4056,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4057,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4058,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4059,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4061,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4062,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4064,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 619,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4070,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4075,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 631,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4078,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4079,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 631,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4080,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4081,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4085,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4090,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 635,
+    "Step1Q1A": 9999,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3058,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 29
+  },
+  {
+    "StudentID": 3439,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 26
+  },
+  {
+    "StudentID": 3486,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 11
+  },
+  {
+    "StudentID": 3802,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3803,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3805,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 9
+  },
+  {
+    "StudentID": 3806,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 15
+  },
+  {
+    "StudentID": 3809,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 2,
+    "TotalScore": 31
+  },
+  {
+    "StudentID": 3810,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3812,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 1,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3813,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3814,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3818,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 3,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3819,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3820,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 5
+  },
+  {
+    "StudentID": 3821,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3823,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3827,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 606,
+    "Step1Q1A": 3,
+    "Step1Q1B": 3,
+    "Step1Q1C": 3,
+    "TotalScore": 21
+  },
+  {
+    "StudentID": 3828,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 606,
+    "Step1Q1A": 1,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3829,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 606,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3830,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 606,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3835,
+    "FacID": 4,
+    "Semester": 3,
+    "CaseAssignment1": 606,
+    "Step1Q1A": 1,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3837,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 9
+  },
+  {
+    "StudentID": 3838,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 3,
+    "Step1Q1C": 1,
+    "TotalScore": 23
+  },
+  {
+    "StudentID": 3839,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3840,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 1,
+    "Step1Q1B": 3,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3841,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 99,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 2
+  },
+  {
+    "StudentID": 3843,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3847,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 609,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3848,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 7
+  },
+  {
+    "StudentID": 3849,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3850,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3851,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3855,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 23
+  },
+  {
+    "StudentID": 3857,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 23
+  },
+  {
+    "StudentID": 3858,
+    "FacID": 16,
+    "Semester": 3,
+    "CaseAssignment1": 610,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3859,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3861,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 28
+  },
+  {
+    "StudentID": 3862,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3863,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3864,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 26
+  },
+  {
+    "StudentID": 3866,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3867,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3870,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 1,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3871,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 17
+  },
+  {
+    "StudentID": 3873,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3875,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 2,
+    "Step1Q1C": 1,
+    "TotalScore": 23
+  },
+  {
+    "StudentID": 3876,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 1,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 24
+  },
+  {
+    "StudentID": 3877,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3878,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 10
+  },
+  {
+    "StudentID": 3879,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3882,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 8
+  },
+  {
+    "StudentID": 3885,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 3,
+    "Step1Q1C": 1,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3888,
+    "FacID": 5,
+    "Semester": 3,
+    "CaseAssignment1": 582,
+    "Step1Q1A": 3,
+    "Step1Q1B": 2,
+    "Step1Q1C": 1,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3891,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 22
+  },
+  {
+    "StudentID": 3892,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3893,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3897,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 21
+  },
+  {
+    "StudentID": 3898,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3901,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 609,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 12
+  },
+  {
+    "StudentID": 3904,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 1,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 21
+  },
+  {
+    "StudentID": 3912,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3913,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 5
+  },
+  {
+    "StudentID": 3916,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3917,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 30
+  },
+  {
+    "StudentID": 3920,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 19
+  },
+  {
+    "StudentID": 3921,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 3,
+    "Step1Q1C": 2,
+    "TotalScore": 27
+  },
+  {
+    "StudentID": 3922,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 1,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3924,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 13
+  },
+  {
+    "StudentID": 3926,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 604,
+    "Step1Q1A": 2,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 11
+  },
+  {
+    "StudentID": 3929,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 0,
+    "Step1Q1B": 0,
+    "Step1Q1C": 0,
+    "TotalScore": 14
+  },
+  {
+    "StudentID": 3934,
+    "FacID": 2,
+    "Semester": 3,
+    "CaseAssignment1": 612,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 18
+  },
+  {
+    "StudentID": 3937,
+    "FacID": 14,
+    "Semester": 3,
+    "CaseAssignment1": 611,
+    "Step1Q1A": 3,
+    "Step1Q1B": 1,
+    "Step1Q1C": 0,
+    "TotalScore": 20
+  },
+  {
+    "StudentID": 3942,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3945,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3946,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3948,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3950,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3951,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3952,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3954,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3955,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3958,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3960,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3962,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3963,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3967,
+    "FacID": 3,
+    "Semester": 4,
+    "CaseAssignment1": 642,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3970,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3971,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3973,
+    "FacID": 15,
+    "Semester": 3,
+    "CaseAssignment1": 609,
+    "Step1Q1A": 2,
+    "Step1Q1B": 2,
+    "Step1Q1C": 0,
+    "TotalScore": 16
+  },
+  {
+    "StudentID": 3975,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3976,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3978,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3979,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3980,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 647,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3981,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3986,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 647,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3988,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3989,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 645,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 3993,
+    "FacID": 9,
+    "Semester": 4,
+    "CaseAssignment1": 647,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4001,
+    "FacID": 14,
+    "Semester": 4,
+    "CaseAssignment1": 643,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4013,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4015,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4020,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4023,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4024,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4025,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4043,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 632,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4044,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4049,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4050,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4052,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4053,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4054,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4055,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4056,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4057,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4058,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4059,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4061,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4062,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4064,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 621,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4070,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4075,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 632,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4078,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4079,
+    "FacID": 7,
+    "Semester": 4,
+    "CaseAssignment1": 632,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4080,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4081,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4085,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  },
+  {
+    "StudentID": 4090,
+    "FacID": 15,
+    "Semester": 4,
+    "CaseAssignment1": 637,
+    "Step1Q1A": 0,
+    "Step1Q1B": 9999,
+    "Step1Q1C": 9999,
+    "TotalScore": 9999
+  }
+]
