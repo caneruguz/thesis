@@ -207,19 +207,22 @@
             var row;
             var text = '';
             var header = '';
+            var headerDone = false;
             for (i = 0; i < data.length; i++) {
                 row = data[i];
+                if (!row.student){
+                    continue;
+                }
                 for (var prop in row) {
-                    if(i === 0){
+                    if(!headerDone){
                         header += ',' + prop;
                     }
                     text += ',' + row[prop];
-                    console.log("obj." + prop + " = " + row[prop]);
                 }
-                text += '\n';
+                headerDone = true;
+                text += ('==');
             }
-            $('.output').text(header + '\n' + text);
-
+            $('.output').text(header + '\r' + text);
 
         }
 
