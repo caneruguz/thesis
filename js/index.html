@@ -167,10 +167,10 @@
                     user.temp.usedURLs.push(row.url);
                 }
                 total = user.totalHigh + user.totalLow;
-                user.relevancyRatio = user.totalHigh / total;
+                user.relevancyRatio = Math.round((user.totalHigh / total) * 100) / 100;
 
                 uniqueTotal = user.totalUniqueHigh + user.totalUniqueLow;
-                user.uniqueRelevancyRatio = user.totalUniqueHigh / uniqueTotal;
+                user.uniqueRelevancyRatio = Math.round((user.totalUniqueHigh / uniqueTotal) * 100) / 100 ;
 
             }
             buildUserData();
@@ -179,10 +179,11 @@
         function buildUserData (){
             var i;
             var oldRow;
-            var newRow = {};
+            var newRow;
             var user;
             for (i = 0; i < full_data.length; i++){
                 oldRow = full_data[i];
+                newRow = {};
                 if(users[oldRow.StudentID]){
                     user = users[oldRow.StudentID];
                     newRow.student = oldRow.StudentID;
