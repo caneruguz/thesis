@@ -58,6 +58,7 @@
                 <p>Use commands available below to restructure data.</p>
                 <button id="btnLoad" class="btn btn-sm btn-default btn-block">Load data</button>
                 <button id="btnReset" class="btn btn-sm btn-default btn-block">Reset data</button>
+                <button id="saveCSV" class="btn btn-sm btn-default btn-block">Save CSV</button>
 
             </div>
             <div class="col-xs-9 console">
@@ -73,7 +74,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+<script src="libs/FileSaver.min.js"></script>
 
     <script type="text/javascript">
         var full_data;
@@ -248,6 +249,10 @@
             $('#btnReset').click(function(){
                 reset();
             });
+            $('#saveCSV').click(function(){
+                var blob = new Blob([$('.output').text()], {type: "text/plain;charset=utf-8"});
+                saveAs(blob, "output/temp.csv");
+            })
         });
     </script>
 
