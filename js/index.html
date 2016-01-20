@@ -195,10 +195,15 @@
                     newRow.relevancyRatio = user.relevancyRatio;
                     newRow.uniqueRelevancyRatio = user.uniqueRelevancyRatio;
                     newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
+                    newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
+                    newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
+                    newRow.TotalScore = oldRow.TotalScore;
                 }
                 newUserData.push(newRow);
             }
             console.log('New: ', newUserData);
+            log('User data built', 'default');
+
             outputCSV(newUserData);
         }
 
