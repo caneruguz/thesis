@@ -208,22 +208,29 @@
             var text = '';
             var header = '';
             var headerDone = false;
+            var comma = '';
             for (i = 0; i < data.length; i++) {
                 row = data[i];
                 if (!row.student){
                     continue;
                 }
-                for (var prop in row) {
-                    if(!headerDone){
-                        header += ',' + prop;
+                Object.keys(row).forEach(function(key, index, array) {
+                    var value = row[key];
+                    if(index === 0){
+                        comma = '';
+                    } else {
+                        comma = ',';
                     }
-                    text += ',' + row[prop];
-                }
+                    if(!headerDone){
+                        header += comma + key;
+                    }
+                    text += comma + value;
+                });
                 headerDone = true;
-                text += ('==');
+                text += ('<br>');
             }
-            $('.output').text(header + '\r' + text);
-
+            $('.output').html(header + '<br>' + text);
+            log('CSV output completed for ' + data.length + ' rows.', 'default');
         }
 
 
