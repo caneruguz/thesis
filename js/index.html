@@ -58,6 +58,10 @@
                 <p>Use commands available below to restructure data.</p>
                 <button id="btnLoad" class="btn btn-sm btn-default btn-block">Load data</button>
                 <button id="btnReset" class="btn btn-sm btn-default btn-block">Reset data</button>
+                <hr />
+                <button id="btnCor" class="btn btn-sm btn-default btn-block">Build Correlation Data</button>
+
+
                 <button id="saveCSV" class="btn btn-sm btn-default btn-block">Save CSV</button>
 
             </div>
@@ -65,7 +69,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 output">
+            <div class="col-xs-12 output" style="white-space: pre;">
                 CSV output will appear here....
             </div>
         </div>
@@ -118,7 +122,6 @@
                 console.log(result);
                 full_click_track = result;
                 log('Received data full_click_track.json.' + result.length + ' rows.', 'success');
-                refactorLogstoStudents();
             }).fail(function(){
                 log('Failed to receive full_click_track.json', 'danger');
             })
@@ -233,9 +236,9 @@
                     text += comma + value;
                 });
                 headerDone = true;
-                text += ('<br>');
+                text += ('\n');
             }
-            $('.output').html(header + '<br>' + text);
+            $('.output').html(header + '\n' + text);
             log('CSV output completed for ' + data.length + ' rows.', 'default');
         }
 
@@ -249,6 +252,10 @@
             $('#btnReset').click(function(){
                 reset();
             });
+            $('#btnCor').click(function(){
+                refactorLogstoStudents();
+            });
+
             $('#saveCSV').click(function(){
                 var blob = new Blob([$('.output').text()], {type: "text/plain;charset=utf-8"});
                 saveAs(blob, "output/temp.csv");
