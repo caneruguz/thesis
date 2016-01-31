@@ -206,6 +206,15 @@
                     newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
                     newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
                     newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
+                    if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
+                        newRow.Step1QTotal = 'NA';
+                    } else {
+                        var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
+                        var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
+                        var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
+                        newRow.Step1QTotal = a + b + c;
+
+                    }
                     newRow.TotalScore = oldRow.TotalScore;
                 }
                 newUserData.push(newRow);
