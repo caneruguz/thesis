@@ -138,9 +138,16 @@
             var user;
             var total;
             var uniqueTotal;
+            var lastDate;
+            var duration = 0;
+            var lastStudent;
             for(i= 0; i < full_click_track.length; i++){
                 row = full_click_track[i];
                 user = users[row.student];
+//                if(row.FIRST === 1){
+//                    continue;
+//                }
+
                 if (!user){
                     user = {
                         id : row.student,
@@ -151,6 +158,9 @@
                         totalNoteLength : 0,
                         relevancyRatio : 0.0, // percentage of high
                         uniqueRelevancyRatio: 0.0,
+                        totalHits : 0,
+                        totalSessions : 0,
+                        totalDuration : 0,
                         temp : {
                             usedURLs : []
                         }
@@ -181,6 +191,32 @@
                 uniqueTotal = user.totalUniqueHigh + user.totalUniqueLow;
                 user.uniqueRelevancyRatio = Math.round((user.totalUniqueHigh / uniqueTotal) * 100) / 100 ;
 
+                user.totalHits++;
+
+                // Calculate Sessions
+                var diff;
+                var date = new Date(row.clicktime).getTime(); // time in milliseconds
+                if(!lastDate){
+                    lastDate = date;
+                } else {
+                    if(row.student === lastStudent){
+                        diff = date - lastDate;
+                        if(diff > 1200000) {
+                            duration = duration + 1200000;
+                            user.totalSessions++;
+                        } else {
+                            duration = duration + diff;
+                        }
+                    } else {
+                        diff = 0;
+                        user.totalDuration = (duration/60000)/60; // convert back to hours
+                        duration = 0;
+                    }
+
+                }
+                lastStudent = row.student;
+                lastDate = date;
+
             }
             buildUserData();
         }
@@ -189,13 +225,16 @@
             var i;
             var oldRow;
             var newRow;
+            var newMrRow;
             var user;
             for (i = 0; i < full_data.length; i++){
                 oldRow = full_data[i];
                 newRow = {};
+                newMrRow = {};
                 if(users[oldRow.StudentID]){
                     user = users[oldRow.StudentID];
                     newRow.student = oldRow.StudentID;
+                    newRow.totalHits = user.totalHits;
                     newRow.totalLow = user.totalLow;
                     newRow.totalHigh= user.totalHigh;
                     newRow.totalUniqueLow= user.totalUniqueLow;
@@ -213,11 +252,30 @@
                         var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
                         var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
                         newRow.Step1QTotal = a + b + c;
-
                     }
                     newRow.TotalScore = oldRow.TotalScore;
+
+                    // Multiple regression list
+                    //newMrRow.student = oldRow.StudentID;
+                    newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
+                    newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
+                    newMrRow.skillWithTech = oldRow.Pre10;
+                    newMrRow.totalHits = user.totalHits;
+                     newMrRow.totalSessions = user.totalSessions;
+                     //newMrRow.averageTime
+                     newMrRow.totalTime = user.totalDuration;
+                    // newMrRow.relSearch
+                    // newMrRow.relIndex
+                    // newMrRow.relNotes
+                    // newMrRow.relNotesIndex
+
+
                 }
                 newUserData.push(newRow);
+
+
+                mr_data.push(newMrRow);
+
             }
             console.log('New: ', newUserData);
             log('User data built', 'default');
