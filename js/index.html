@@ -60,6 +60,7 @@
                 <button id="btnReset" class="btn btn-sm btn-default btn-block">Reset data</button>
                 <hr />
                 <button id="btnCor" class="btn btn-sm btn-default btn-block">Build Correlation Data</button>
+                <button id="btnPage" class="btn btn-sm btn-default btn-block">Build Page Data</button>
 
 
                 <button id="saveCSV" class="btn btn-sm btn-default btn-block">Save CSV</button>
@@ -87,6 +88,9 @@
         var users = {};
         var newUserData = [];
         var lineNumber = 0;
+        var page_data = [];
+        var mr_data = [];
+
         function log (text, type) {
             lineNumber++;
             $('.console').append('<div class="log-message ' + type + '" data-line="' + lineNumber + '">' + lineNumber + ': ' + text + '<div>');
@@ -95,6 +99,7 @@
             full_data = [];
             full_click_track = [];
             short_outcome = [];
+
             users = [];
             log('Variables have been reset to empty', 'default');
         }
@@ -211,6 +216,66 @@
             outputCSV(newUserData);
         }
 
+        function buildPageData () {
+            var urlList = [];
+            var urlListCounts = [];
+            var tempPageData = {};
+            var i, j, k;
+            var o, m, n;
+            for (i = 0; i < full_click_track.length; i++) {
+                o = full_click_track[i];
+                var student = o.student;
+                var url = o.url;
+                // If student object doesn't exit, create it
+                if(!tempPageData[student]){
+                    tempPageData[student] = {
+                        student : student
+                    };
+                }
+                // Add web page count to the student object
+                var studentData = tempPageData[student];
+                if(!studentData[url]){
+                    studentData[url] = 1;
+                } else {
+                    studentData[url]++;
+                }
+
+                // Add to unique url list to build 0 columns later
+                var urlListIndex = urlList.indexOf(url);
+                if( urlListIndex === -1 ){
+                    var newIndex = urlList.push(url);
+                    urlListCounts[newIndex-1] = 1;
+                } else {
+                    urlListCounts[urlListIndex]++;
+                }
+            }
+            // Add score total to object
+            for(k = 0; k < full_data.length; k++){
+                n = full_data[k];
+                if(tempPageData[n.StudentID]){
+                    var Step1Q1A = n.Step1Q1A < 98 ? n.Step1Q1A : 0;
+                    var Step1Q1B = n.Step1Q1B < 98 ? n.Step1Q1B : 0;
+                    var Step1Q1C = n.Step1Q1C < 98 ? n.Step1Q1C : 0;
+                    var totalScores = Step1Q1A + Step1Q1B + Step1Q1C;
+                    tempPageData[n.StudentID].score = totalScores;
+                }
+            }
+
+            Object.keys(tempPageData).forEach(function(key, index, array) {
+                var value = tempPageData[key];
+                for(j = 0; j < urlList.length; j++){
+                    m = urlList[j];
+                    if(!value[m]){
+                        value[m] = 0;
+                    }
+                }
+                page_data.push(value);
+            })
+
+            console.log(urlListCounts);
+            outputCSV(page_data);
+        }
+
         function outputCSV (data) {
             var i;
             var row;
@@ -255,7 +320,9 @@
             $('#btnCor').click(function(){
                 refactorLogstoStudents();
             });
-
+            $('#btnPage').click(function(){
+                buildPageData();
+            });
             $('#saveCSV').click(function(){
                 var blob = new Blob([$('.output').text()], {type: "text/plain;charset=utf-8"});
                 saveAs(blob, "output/temp.csv");
