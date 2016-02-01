@@ -61,6 +61,7 @@
                 <hr />
                 <button id="btnCor" class="btn btn-sm btn-default btn-block">Build Correlation Data</button>
                 <button id="btnPage" class="btn btn-sm btn-default btn-block">Build Page Data</button>
+                <button id="btnMR" class="btn btn-sm btn-default btn-block">Build Multiple Reg Data</button>
 
 
                 <button id="saveCSV" class="btn btn-sm btn-default btn-block">Save CSV</button>
@@ -256,24 +257,23 @@
                     newRow.TotalScore = oldRow.TotalScore;
 
                     // Multiple regression list
-                    //newMrRow.student = oldRow.StudentID;
+                    newMrRow.student = oldRow.StudentID;
                     newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
                     newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
                     newMrRow.skillWithTech = oldRow.Pre10;
                     newMrRow.totalHits = user.totalHits;
-                     newMrRow.totalSessions = user.totalSessions;
-                     //newMrRow.averageTime
-                     newMrRow.totalTime = user.totalDuration;
-                    // newMrRow.relSearch
-                    // newMrRow.relIndex
-                    // newMrRow.relNotes
-                    // newMrRow.relNotesIndex
-
+                    newMrRow.totalSessions = user.totalSessions;
+                    newMrRow.totalTime = user.totalDuration;
+                    newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
+                    newMrRow.relSearch = (oldRow.RelSearch_1 + oldRow.RelSearch_2 + oldRow.RelSearch_3) / 3;
+                    newMrRow.relIndex =  (oldRow.RelIndex_1 + oldRow.RelIndex_2 + oldRow.RelIndex_3) / 3;
+                    newMrRow.relNotes =  (oldRow.RelNotes_1 + oldRow.RelNotes_2 + oldRow.RelNotes_3) / 3;
+                    newMrRow.relNotesIndex =  (oldRow.RelNotesIndex_1 + oldRow.RelNotesIndex_2 + oldRow.RelNotesIndex_3) / 3;
+                    newMrRow.SE_Change = oldRow.SE_Diff;
+                    newMrRow.totalQ1 = newRow.Step1QTotal;
 
                 }
                 newUserData.push(newRow);
-
-
                 mr_data.push(newMrRow);
 
             }
@@ -389,6 +389,14 @@
             });
             $('#btnPage').click(function(){
                 buildPageData();
+            });
+            $('#btnMR').click(function(){
+                if(mr_data.length === 0){
+                    log('MR Data nor prepared yet.', 'danger');
+                } else {
+                    outputCSV(mr_data);
+                    log('Printing MR data to CSV. Hit Save CSV to download.', 'success');
+                }
             });
             $('#saveCSV').click(function(){
                 var blob = new Blob([$('.output').text()], {type: "text/plain;charset=utf-8"});
