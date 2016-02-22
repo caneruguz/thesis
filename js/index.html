@@ -151,6 +151,8 @@
                     item.durationThird = 0;
                     item.lastPageThird = 0;
                     item.hitsThird = 0;
+                    item.repeatHitsFirst = 0;
+                    item.repeatHitsThird = 0;
                     page_index[item.Page] = item;
                 })
                 page_metrics = result;
@@ -262,6 +264,7 @@
                         readTimeDifference:0, // Difference between expected read time and duration
                         temp : {
                             usedURLs : [],
+                            uniqueUsedUrl : [],
                             totalItems : 0,
                             pageComplexityTotal : 0,
                             pageLengthTotal:0,
@@ -290,6 +293,30 @@
                 if(row.newRelevancy === 1){
                     user.totalHigh++
                 }
+
+                if(i > 0){
+                    var lastrow = full_click_track[i-1] || { url : ""};
+                    var lastRowUrl = page_index[lastrow.url] || {};
+                    var lastUser = users[full_click_track[i-1].student + ":" + full_click_track[i-1].assignment];
+                    if(lastrow.first){
+                        lastRowUrl.hitsFirst++;
+                        if(lastUser && lastUser.temp.uniqueUsedUrl.indexOf(lastrow.url) !== -1 ) {
+                            lastRowUrl.repeatHitsFirst++;
+                        } else {
+                            lastUser.temp.uniqueUsedUrl.push(lastrow.url);
+                        }
+                    } else {
+                        lastRowUrl.hitsThird++;
+                        if(lastUser && lastUser.temp.uniqueUsedUrl.indexOf(lastrow.url) !== -1 ) {
+                            lastRowUrl.repeatHitsThird++;
+                        } else {
+                            lastUser.temp.uniqueUsedUrl.push(lastrow.url);
+                        }
+                    }
+                }
+
+
+
                 if(user.temp.usedURLs.indexOf(row.url) === -1 ){
                     if(row.Note !== 'NULL'){
                         if(row.Note === 0) { row.Note = ""; }
@@ -312,13 +339,8 @@
                 user.totalHits++;
 
 
-                var lastrow = full_click_track[i-1] || { url : ""};
-                var lastRowUrl = page_index[lastrow.url] || {};
-                if(lastrow.first){
-                    lastRowUrl.hitsFirst++;
-                } else {
-                    lastRowUrl.hitsThird++;
-                }
+
+
 
                 // Calculate Sessions
                 var diff;
@@ -438,6 +460,9 @@
                     newMrRow.pageComplexity = user1.pageComplexity;
                     newMrRow.pageLength = user1.pageLength;
                     newMrRow.pageSentiment = user1.pageSentiment;
+                    newMrRow.BeforeSub = oldRow.BeforeSub;
+                    newMrRow.preSeTotal = oldRow.Pre_SE1 + oldRow.Pre_SE2 +oldRow.Pre_SE3 +oldRow.Pre_SE4 +oldRow.Pre_SE5 +oldRow.Pre_SE6 +oldRow.Pre_SE7 +oldRow.Pre_SE8 +oldRow.Pre_SE9 +oldRow.Pre_SE10 +oldRow.Pre_SE11 + oldRow.Pre_SE12;
+
                     newUserData.push(newRow);
                     mr_data.push(newMrRow);
                 }
@@ -498,7 +523,8 @@
                     newMrRow.pageComplexity = user2.pageComplexity;
                     newMrRow.pageLength = user2.pageLength;
                     newMrRow.pageSentiment = user2.pageSentiment;
-
+                    newMrRow.BeforeSub = oldRow.BeforeSub;
+                    newMrRow.preSeTotal = oldRow.Pre_SE1 + oldRow.Pre_SE2 +oldRow.Pre_SE3 +oldRow.Pre_SE4 +oldRow.Pre_SE5 +oldRow.Pre_SE6 +oldRow.Pre_SE7 +oldRow.Pre_SE8 +oldRow.Pre_SE9 +oldRow.Pre_SE10 +oldRow.Pre_SE11 + oldRow.Pre_SE12;
                     newUserData.push(newRow);
                     mr_data.push(newMrRow);
                 }
