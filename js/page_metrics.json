@@ -1,0 +1,732 @@
+[
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "abo_facilities.htm",
+    "Group": "About",
+    "Readability": 56.6,
+    "Length": 174,
+    "Sentiment": 22,
+    "Read time in minutes": 0.633
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "abo_facilities_map.htm",
+    "Group": "About",
+    "Readability": 10,
+    "Length": 30,
+    "Sentiment": 5,
+    "Read time in minutes": 0.109
+  },
+  {
+    "0": 1,
+    "1": 0,
+    "Page": "abo_mission.htm",
+    "Group": "About",
+    "Readability": 33,
+    "Length": 78,
+    "Sentiment": 23,
+    "Read time in minutes": 0.284
+  },
+  {
+    "0": 1,
+    "1": 1,
+    "Page": "abo_school.htm",
+    "Group": "About",
+    "Readability": 46.4,
+    "Length": 377,
+    "Sentiment": 3,
+    "Read time in minutes": 1.371
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_classroom.html",
+    "Group": "Curriculum and Assessment",
+    "Readability": 51.3,
+    "Length": 126,
+    "Sentiment": 9,
+    "Read time in minutes": 0.458
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_classroom_clip.html",
+    "Group": "Curriculum and Assessment",
+    "Readability": 60.5,
+    "Length": 442,
+    "Sentiment": 16,
+    "Read time in minutes": 1.607
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_classroom_talk.html",
+    "Group": "Curriculum and Assessment",
+    "Readability": 68.7,
+    "Length": 252,
+    "Sentiment": 10,
+    "Read time in minutes": 0.916
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_classroom_talk2.html",
+    "Group": "Curriculum and Assessment",
+    "Readability": 47.3,
+    "Length": 210,
+    "Sentiment": 15,
+    "Read time in minutes": 0.764
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_classroom_teacher.html",
+    "Group": "Curriculum and Assessment",
+    "Readability": 45.4,
+    "Length": 2980,
+    "Sentiment": 15,
+    "Read time in minutes": 10.836
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_computer.htm",
+    "Group": "Curriculum and Assessment",
+    "Readability": 25.7,
+    "Length": 438,
+    "Sentiment": 13,
+    "Read time in minutes": 1.593
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "cur_sequence.htm",
+    "Group": "Curriculum and Assessment",
+    "Readability": 45.1,
+    "Length": 11381,
+    "Sentiment": 9,
+    "Read time in minutes": 41.385
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "cur_standards.htm",
+    "Group": "Curriculum and Assessment",
+    "Readability": 30.07,
+    "Length": 5618,
+    "Sentiment": 9,
+    "Read time in minutes": 20.429
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "home.html",
+    "Group": "Home",
+    "Readability": 43.3,
+    "Length": 88,
+    "Sentiment": 15,
+    "Read time in minutes": 0.32
+  },
+  {
+    "0": 1,
+    "1": 0,
+    "Page": "intranet/fin_budget.html",
+    "Group": "Intranet-Financial",
+    "Readability": 73.5,
+    "Length": 182,
+    "Sentiment": 2,
+    "Read time in minutes": 0.662
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/pol_instruct.html",
+    "Group": "Intranet-Policies",
+    "Readability": 22.4,
+    "Length": 1231,
+    "Sentiment": 13,
+    "Read time in minutes": 4.476
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/pol_personne.html",
+    "Group": "Intranet-Policies",
+    "Readability": 31.6,
+    "Length": 1785,
+    "Sentiment": 4,
+    "Read time in minutes": 6.491
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/sta_leadersh.html",
+    "Group": "Intranet-StaffData",
+    "Readability": -131.9,
+    "Length": 164,
+    "Sentiment": 4,
+    "Read time in minutes": 0.596
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/sta_staff_as.html",
+    "Group": "Intranet-StaffData",
+    "Readability": 46,
+    "Length": 103,
+    "Sentiment": -2,
+    "Read time in minutes": 0.375
+  },
+  {
+    "0": 1,
+    "1": 0,
+    "Page": "intranet/sta_supervis.html",
+    "Group": "Intranet-StaffData",
+    "Readability": -12.2,
+    "Length": 252,
+    "Sentiment": 1,
+    "Read time in minutes": 0.916
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/sta_teacher_.html",
+    "Group": "Intranet-StaffData",
+    "Readability": 24.8,
+    "Length": 247,
+    "Sentiment": 10,
+    "Read time in minutes": 0.898
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "intranet/stu_attendan.html",
+    "Group": "Intranet-StudentData",
+    "Readability": -35.7,
+    "Length": 115,
+    "Sentiment": -3,
+    "Read time in minutes": 0.418
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "intranet/stu_discipli.html",
+    "Group": "Intranet-StudentData",
+    "Readability": -5.4,
+    "Length": 52,
+    "Sentiment": 4,
+    "Read time in minutes": 0.189
+  },
+  {
+    "0": 1,
+    "1": 1,
+    "Page": "intranet/stu_grades__.html",
+    "Group": "Intranet-StudentData",
+    "Readability": 61.4,
+    "Length": 70,
+    "Sentiment": -2,
+    "Read time in minutes": 0.255
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "intranet/home.html",
+    "Group": "Intranet-Home",
+    "Readability": 66.8,
+    "Length": 7,
+    "Sentiment": 48,
+    "Read time in minutes": 0.025
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_leadership.html",
+    "Group": "Professional Development",
+    "Readability": 5,
+    "Length": 202,
+    "Sentiment": 11,
+    "Read time in minutes": 0.735
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_leadership_talk.html",
+    "Group": "Professional Development",
+    "Readability": 58.3,
+    "Length": 318,
+    "Sentiment": 15,
+    "Read time in minutes": 1.156
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_learncommunity.html",
+    "Group": "Professional Development",
+    "Readability": 22.6,
+    "Length": 97,
+    "Sentiment": 13,
+    "Read time in minutes": 0.353
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_learncommunity_talk.html",
+    "Group": "Professional Development",
+    "Readability": 73.6,
+    "Length": 232,
+    "Sentiment": 25,
+    "Read time in minutes": 0.844
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_process.html",
+    "Group": "Professional Development",
+    "Readability": 7.5,
+    "Length": 147,
+    "Sentiment": 16,
+    "Read time in minutes": 0.535
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_resources.html",
+    "Group": "Professional Development",
+    "Readability": 9.7,
+    "Length": 76,
+    "Sentiment": 11,
+    "Read time in minutes": 0.276
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_content.html",
+    "Group": "Professional Development",
+    "Readability": 14.6,
+    "Length": 195,
+    "Sentiment": 8,
+    "Read time in minutes": 0.709
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_data.html",
+    "Group": "Professional Development",
+    "Readability": 42.9,
+    "Length": 199,
+    "Sentiment": 12,
+    "Read time in minutes": 0.724
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_evaluation.html",
+    "Group": "Professional Development",
+    "Readability": 46.7,
+    "Length": 163,
+    "Sentiment": 20,
+    "Read time in minutes": 0.593
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_research.html",
+    "Group": "Professional Development",
+    "Readability": 41.7,
+    "Length": 65,
+    "Sentiment": 14,
+    "Read time in minutes": 0.236
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_design.html",
+    "Group": "Professional Development",
+    "Readability": 41.6,
+    "Length": 115,
+    "Sentiment": 43,
+    "Read time in minutes": 0.418
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_learning.html",
+    "Group": "Professional Development",
+    "Readability": 42.4,
+    "Length": 172,
+    "Sentiment": 24,
+    "Read time in minutes": 0.625
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_content_area.html",
+    "Group": "Professional Development",
+    "Readability": 25.2,
+    "Length": 830,
+    "Sentiment": 12,
+    "Read time in minutes": 3.018
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "pro_collaboration.html",
+    "Group": "Professional Development",
+    "Readability": 27,
+    "Length": 99,
+    "Sentiment": 4,
+    "Read time in minutes": 0.36
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sch_business.html",
+    "Group": "School Community Connections",
+    "Readability": 46.5,
+    "Length": 92,
+    "Sentiment": 42,
+    "Read time in minutes": 0.335
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sch_business_artifact.html",
+    "Group": "School Community Connections",
+    "Readability": 37.1,
+    "Length": 107,
+    "Sentiment": 30,
+    "Read time in minutes": 0.389
+  },
+  {
+    "0": 1,
+    "1": 0,
+    "Page": "sch_community.html",
+    "Group": "School Community Connections",
+    "Readability": 24.6,
+    "Length": 95,
+    "Sentiment": 9,
+    "Read time in minutes": 0.345
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sch_family.html",
+    "Group": "School Community Connections",
+    "Readability": 53.4,
+    "Length": 104,
+    "Sentiment": 19,
+    "Read time in minutes": 0.378
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sch_family_artifact.html",
+    "Group": "School Community Connections",
+    "Readability": 60,
+    "Length": 184,
+    "Sentiment": 28,
+    "Read time in minutes": 0.669
+  },
+  {
+    "0": 1,
+    "1": 0,
+    "Page": "sch_higher.html",
+    "Group": "School Community Connections",
+    "Readability": 34.9,
+    "Length": 190,
+    "Sentiment": 27,
+    "Read time in minutes": 0.691
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_demographics_talk.htm",
+    "Group": "Staff",
+    "Readability": 73.1,
+    "Length": 270,
+    "Sentiment": 16,
+    "Read time in minutes": 0.982
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_demographics.htm",
+    "Group": "Staff",
+    "Readability": 22.1,
+    "Length": 91,
+    "Sentiment": 0,
+    "Read time in minutes": 0.331
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_contract.htm",
+    "Group": "Staff",
+    "Readability": 67.6,
+    "Length": 155,
+    "Sentiment": 3,
+    "Read time in minutes": 0.564
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_contract_talk.htm",
+    "Group": "Staff",
+    "Readability": 71.2,
+    "Length": 164,
+    "Sentiment": 11,
+    "Read time in minutes": 0.596
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_meetings.htm",
+    "Group": "Staff",
+    "Readability": 35,
+    "Length": 147,
+    "Sentiment": 20,
+    "Read time in minutes": 0.535
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_meetings_artifact.htm",
+    "Group": "Staff",
+    "Readability": 53,
+    "Length": 350,
+    "Sentiment": 2,
+    "Read time in minutes": 1.273
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_meetings_talk.htm",
+    "Group": "Staff",
+    "Readability": 76.2,
+    "Length": 185,
+    "Sentiment": 20,
+    "Read time in minutes": 0.673
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_schedule.htm",
+    "Group": "Staff",
+    "Readability": 78.6,
+    "Length": 108,
+    "Sentiment": 14,
+    "Read time in minutes": 0.393
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_leadership.htm",
+    "Group": "Staff",
+    "Readability": 32.6,
+    "Length": 75,
+    "Sentiment": 7,
+    "Read time in minutes": 0.273
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "sta_leadership_talk.htm",
+    "Group": "Staff",
+    "Readability": 75.1,
+    "Length": 220,
+    "Sentiment": 21,
+    "Read time in minutes": 0.8
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "sta_mentoring.htm",
+    "Group": "Staff",
+    "Readability": 42.1,
+    "Length": 226,
+    "Sentiment": 25,
+    "Read time in minutes": 0.822
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "stu_demographics.htm",
+    "Group": "Students",
+    "Readability": 39.8,
+    "Length": 89,
+    "Sentiment": 18,
+    "Read time in minutes": 0.324
+  },
+  {
+    "0": 0,
+    "1": 1,
+    "Page": "stu_demographics_clip.htm",
+    "Group": "Students",
+    "Readability": 37.7,
+    "Length": 107,
+    "Sentiment": 23,
+    "Read time in minutes": 0.389
+  },
+  {
+    "0": 1,
+    "1": 1,
+    "Page": "stu_performance.htm",
+    "Group": "Students",
+    "Readability": 53.1,
+    "Length": 132,
+    "Sentiment": 6,
+    "Read time in minutes": 0.48
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "stu_schedule.htm",
+    "Group": "Students",
+    "Readability": 56.3,
+    "Length": 50,
+    "Sentiment": 8,
+    "Read time in minutes": 0.182
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "stu_leadership.htm",
+    "Group": "Students",
+    "Readability": 56.3,
+    "Length": 70,
+    "Sentiment": 3,
+    "Read time in minutes": 0.255
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "stu_leadership_artifact.htm",
+    "Group": "Students",
+    "Readability": "NA",
+    "Length": "NA",
+    "Sentiment": "NA",
+    "Read time in minutes": "NA"
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_classroom.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 43,
+    "Length": 141,
+    "Sentiment": 23,
+    "Read time in minutes": 0.513
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_classroom_setup.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 33.7,
+    "Length": 1302,
+    "Sentiment": 7,
+    "Read time in minutes": 4.735
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_community.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 47.2,
+    "Length": 288,
+    "Sentiment": 6,
+    "Read time in minutes": 1.047
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_policies.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 21.3,
+    "Length": 379,
+    "Sentiment": 11,
+    "Read time in minutes": 1.378
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_policies_clip.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 48.1,
+    "Length": 277,
+    "Sentiment": 15,
+    "Read time in minutes": 1.007
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_schoolwide.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 61.5,
+    "Length": 86,
+    "Sentiment": 6,
+    "Read time in minutes": 0.313
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_schoolwide_labs.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 44.4,
+    "Length": 796,
+    "Sentiment": 3,
+    "Read time in minutes": 2.895
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_committee.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 31.6,
+    "Length": 129,
+    "Sentiment": 7,
+    "Read time in minutes": 0.469
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_committee_talk.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 72.4,
+    "Length": 266,
+    "Sentiment": 17,
+    "Read time in minutes": 0.967
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_plan.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 37.3,
+    "Length": 255,
+    "Sentiment": 20,
+    "Read time in minutes": 0.927
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_support.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 43.4,
+    "Length": 477,
+    "Sentiment": 11,
+    "Read time in minutes": 1.735
+  },
+  {
+    "0": 0,
+    "1": 0,
+    "Page": "tec_survey.html",
+    "Group": "Technology Infrastructure",
+    "Readability": 74.5,
+    "Length": 252,
+    "Sentiment": 10,
+    "Read time in minutes": 0.916
+  }
+]

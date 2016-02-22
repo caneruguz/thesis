@@ -1,0 +1,25 @@
+  yearsTaught       yearsAdmin     skillWithTech     totalHits      totalSessions      totalTime    
+ Min.   : 0.000   Min.   : 0.000   Min.   :1.000   Min.   : 14.00   Min.   : 0.000   Min.   :0.000  
+ 1st Qu.: 5.000   1st Qu.: 0.000   1st Qu.:2.000   1st Qu.: 50.00   1st Qu.: 1.000   1st Qu.:1.058  
+ Median : 9.500   Median : 0.000   Median :2.000   Median : 73.50   Median : 2.000   Median :1.775  
+ Mean   : 9.456   Mean   : 2.279   Mean   :2.574   Mean   : 90.26   Mean   : 3.515   Mean   :2.380  
+ 3rd Qu.:13.250   3rd Qu.: 4.000   3rd Qu.:3.000   3rd Qu.:117.75   3rd Qu.: 5.250   3rd Qu.:3.321  
+ Max.   :25.000   Max.   :20.000   Max.   :4.000   Max.   :249.00   Max.   :15.000   Max.   :6.700  
+                                                                                                    
+  averageTime    relSearch          relIndex          relNotes      relNotesIndex       noteLength  
+ Min.   :  0   Min.   :0.05333   Min.   :0.07333   Min.   :0.0000   Min.   :0.00000   Min.   :   0  
+ 1st Qu.:  0   1st Qu.:0.10917   1st Qu.:0.13333   1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:   0  
+ Median :  1   Median :0.12000   Median :0.15333   Median :0.1950   Median :0.08667   Median :   0  
+ Mean   :Inf   Mean   :0.12887   Mean   :0.16186   Mean   :0.2433   Mean   :0.10559   Mean   :1063  
+ 3rd Qu.:  2   3rd Qu.:0.14000   3rd Qu.:0.17000   3rd Qu.:0.4508   3rd Qu.:0.17083   3rd Qu.:1236  
+ Max.   :Inf   Max.   :0.27667   Max.   :0.32000   Max.   :0.8100   Max.   :0.53667   Max.   :8049  
+ NA's   :1                                                                                          
+ 
+ noteLengthPerPAge    totalQ1     
+ Min.   :  0.00    Min.   :0.000  
+ 1st Qu.:  0.00    1st Qu.:0.000  
+ Median :  0.00    Median :1.000  
+ Mean   : 13.46    Mean   :1.853  
+ 3rd Qu.: 12.96    3rd Qu.:3.000  
+ Max.   :115.75    Max.   :7.000  
+                                 

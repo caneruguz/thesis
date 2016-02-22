@@ -7,29 +7,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
         <style>
 
         .commands {
             background-color: #eee;
-            height: 600px;
+            height: 700px;
         }
         .console {
             background-color: #57576F;
-            height: 600px;
+            height: 700px;
             padding: 10px;
             font-family: monospace;
             overflow: scroll;
         }
         .output {
-            height: 150px;
+            height: 700px;
             overflow: scroll;
             background: #f8f8f8;
             color: #008000;
@@ -53,26 +51,29 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-3 commands">
+            <div class="col-xs-8 commands">
                 <h3> Commands</h3>
                 <p>Use commands available below to restructure data.</p>
-                <button id="btnLoad" class="btn btn-sm btn-default btn-block">Load data</button>
-                <button id="btnReset" class="btn btn-sm btn-default btn-block">Reset data</button>
-                <hr />
-                <button id="btnCor" class="btn btn-sm btn-default btn-block">Build Correlation Data</button>
-                <button id="btnPage" class="btn btn-sm btn-default btn-block">Build Page Data</button>
-                <button id="btnMR" class="btn btn-sm btn-default btn-block">Build Multiple Reg Data</button>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <button id="btnLoad" class="btn btn-sm btn-default  ">Load data</button>
+                        <button id="btnReset" class="btn btn-sm btn-default  ">Reset data</button>
+                        <hr />
+                        <button id="btnCor" class="btn btn-sm btn-default  ">Build Correlation Data</button>
+                        <button id="btnPage" class="btn btn-sm btn-default  ">Build Page Data</button>
+                        <button id="btnMR" class="btn btn-sm btn-default  ">Build Multiple Reg Data</button>
+                        <button id="btnMetrics" class="btn btn-sm btn-default  ">Print Page Metrics</button>
 
+                        <button id="saveCSV" class="btn btn-sm btn-default  ">Save CSV</button>
+                    </div>
+                    <div class="col-xs-9">
 
-                <button id="saveCSV" class="btn btn-sm btn-default btn-block">Save CSV</button>
+                    </div>
+                </div>
+
 
             </div>
-            <div class="col-xs-9 console">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 output" style="white-space: pre;">
-                CSV output will appear here....
+            <div class="col-xs-4 output">
             </div>
         </div>
     </div>
@@ -85,16 +86,20 @@
     <script type="text/javascript">
         var full_data;
         var full_click_track;
+        var page_metrics;
+        var page_index = {};
         var short_outcome;
         var users = {};
         var newUserData = [];
         var lineNumber = 0;
         var page_data = [];
         var mr_data = [];
+        var target_index = {};
+        var target_data = [];
 
         function log (text, type) {
             lineNumber++;
-            $('.console').append('<div class="log-message ' + type + '" data-line="' + lineNumber + '">' + lineNumber + ': ' + text + '<div>');
+            console.log(lineNumber + ': ' + text);
         }
         function reset (){
             full_data = [];
@@ -133,6 +138,97 @@
             })
         }
 
+        function getPageMetrics () {
+            $.ajax({
+                method : 'GET',
+                url : 'page_metrics.json'
+            }).done(function(result){
+                console.log(result);
+                result.map(function(item){
+                    item.durationFirst = 0;
+                    item.lastPageFirst = 0;
+                    item.hitsFirst = 0;
+                    item.durationThird = 0;
+                    item.lastPageThird = 0;
+                    item.hitsThird = 0;
+                    page_index[item.Page] = item;
+                })
+                page_metrics = result;
+            }).fail(function(result){
+                console.log(result);
+            })
+        }
+
+        function reformatClickData () {
+            var i;
+            var o;
+            var duration;
+            for(i= 0; i < full_click_track.length; i++) {
+                o = full_click_track[i];
+                // Recalculate relevancy
+                if(page_index[o.url]){
+                    if(o["first assignment for student"] === 0){
+                        o.newRelevancy = page_index[o.url]["0"];
+                    }
+                    if(o["first assignment for student"] === 1){
+                        o.newRelevancy = page_index[o.url]["1"];
+                    }
+                    o.group = page_index[o.url].Group;
+                    o.readability = page_index[o.url]["Readability"];
+                    o.sentiment = page_index[o.url]["Sentiment"];
+                    o.length = page_index[o.url]["Length"];
+                    o.readtime = page_index[o.url]["Read time in minutes"];
+                } else {
+                    o.newRelevancy = 'NULL';
+                    o.readability = 'NA';
+                    o.sentiment = 'NA';
+                    o.length = 'NA';
+                    o.readtime = 'NA';
+                }
+
+                // Calculate Time spent in minutes
+                if(i > 0){
+                    var last = full_click_track[i-1];
+                    var lastTime = new Date(last.clicktime).getTime();
+                    var thisTime = new Date(o.clicktime).getTime();
+                    var diff = thisTime - lastTime;
+                    if (diff > 1200000){
+                        duration = 1200000;
+                    } else {
+                        duration = diff;
+                    }
+                    last.duration = duration/60000;
+                    last.readTimeDiff = last.duration - last.readtime;
+
+                    // Do target analysis
+                    var from = last.url;
+                    var to = o.url;
+                    if(last.student !== o.student){
+                        to = 'exit';
+                    }
+                    var indexText = from + ':' + to;
+                    if(from !== to){
+                        if(target_index[indexText]){
+                            target_index[indexText].count++;
+                        } else {
+                            target_index[indexText] = {
+                                count: 1,
+                                from: from,
+                                to: to
+                            }
+                        }
+                    }
+
+                }
+                delete o[""];
+                delete o["email"];
+                o.first = o["first assignment for student"];
+                //delete o["first assignment for student"];
+                delete o["kase"];
+                delete o["relevancy"];
+            }
+        }
+
         function refactorLogstoStudents () {
             var row;
             var i;
@@ -144,14 +240,12 @@
             var lastStudent;
             for(i= 0; i < full_click_track.length; i++){
                 row = full_click_track[i];
-                user = users[row.student];
-//                if(row.FIRST === 1){
-//                    continue;
-//                }
-
+                user = users[row.student + ":" + row.assignment];
                 if (!user){
                     user = {
                         id : row.student,
+                        assignment: row.assignment,
+                        first : row.first,
                         totalLow : 0,
                         totalHigh: 0,
                         totalUniqueLow: 0,
@@ -160,29 +254,52 @@
                         relevancyRatio : 0.0, // percentage of high
                         uniqueRelevancyRatio: 0.0,
                         totalHits : 0,
-                        totalSessions : 0,
+                        totalSessions : 1,
                         totalDuration : 0,
+                        pageComplexity : 0,
+                        pageLength:0,
+                        pageSentiment:0,
+                        readTimeDifference:0, // Difference between expected read time and duration
                         temp : {
-                            usedURLs : []
+                            usedURLs : [],
+                            totalItems : 0,
+                            pageComplexityTotal : 0,
+                            pageLengthTotal:0,
+                            pageSentimentTotal:0,
+                            readTimeDifferenceTotal:0
                         }
                     }
-                    users[row.student] = user;
+                    users[row.student + ":" + row.assignment] = user;
                 }
-                if(row.Relevancy === 'Low'){
+                var averagetime = duration / user.temp.totalItems;
+                user.temp.totalItems++;
+                user.temp.pageComplexityTotal = user.temp.pageComplexityTotal + row.readability;
+                user.temp.pageLengthTotal = user.temp.pageLengthTotal + row.length;
+                user.temp.pageSentimentTotal = user.temp.pageSentimentTotal + row.sentiment;
+                user.temp.readTimeDifferenceTotal = user.temp.readTimeDifferenceTotal + row.readTimeDiff;
+
+                user.pageComplexity = user.temp.pageComplexityTotal / user.temp.totalItems;
+                user.pageLength = user.temp.pageLengthTotal / user.temp.totalItems;
+                user.pageSentiment = user.temp.pageSentimentTotal / user.temp.totalItems;
+                //user.readTimeDifference = user.temp.readTimeDifferenceTotal / user.temp.totalItems;
+
+
+                if(row.newRelevancy === 0){
                     user.totalLow++
                 }
-                if(row.Relevancy === 'High'){
+                if(row.newRelevancy === 1){
                     user.totalHigh++
                 }
                 if(user.temp.usedURLs.indexOf(row.url) === -1 ){
-                    if(user.NOTE !== 'NULL'){
-                        user.totalNoteLength = user.totalNoteLength + row.NOTE.length;
+                    if(row.Note !== 'NULL'){
+                        if(row.Note === 0) { row.Note = ""; }
+                        user.totalNoteLength = user.totalNoteLength + row.Note.length;
                     }
-                    if(row.Relevancy === 'Low'){
-                        user.totalUniqueLow++
+                    if(row.newRelevancy === 0){
+                        user.totalUniqueLow++;
                     }
-                    if(row.Relevancy === 'High'){
-                        user.totalUniqueHigh++
+                    if(row.newRelevancy === 1){
+                        user.totalUniqueHigh++;
                     }
                     user.temp.usedURLs.push(row.url);
                 }
@@ -194,23 +311,53 @@
 
                 user.totalHits++;
 
+
+                var lastrow = full_click_track[i-1] || { url : ""};
+                var lastRowUrl = page_index[lastrow.url] || {};
+                if(lastrow.first){
+                    lastRowUrl.hitsFirst++;
+                } else {
+                    lastRowUrl.hitsThird++;
+                }
+
                 // Calculate Sessions
                 var diff;
                 var date = new Date(row.clicktime).getTime(); // time in milliseconds
-                if(!lastDate){
-                    lastDate = date;
-                } else {
+                if(lastDate){
                     if(row.student === lastStudent){
                         diff = date - lastDate;
                         if(diff > 1200000) {
-                            duration = duration + 1200000;
+                            duration = duration + 600000// + Math.round(averagetime);
                             user.totalSessions++;
+                            if(lastrow.first){
+                                lastRowUrl.lastPageFirst++;
+                            } else {
+                                lastRowUrl.lastPageThird++;
+                            }
+                            if(lastrow.first){
+                                lastRowUrl.durationFirst = lastRowUrl.durationFirst + 10;
+                            } else {
+                                lastRowUrl.durationThird = lastRowUrl.durationThird + 10;
+                            }
+                        } else if (diff === 0) {
+                            duration = duration + 30000; // Add Half a second
+                            if(lastrow.first){
+                                lastRowUrl.durationFirst = lastRowUrl.durationFirst + 0.5;
+                            } else {
+                                lastRowUrl.durationThird = lastRowUrl.durationThird + 0.5;
+                            }
+
                         } else {
                             duration = duration + diff;
+                            if(lastrow.first){
+                                lastRowUrl.durationFirst = lastRowUrl.durationFirst+ (diff/60000);
+                            } else {
+                                lastRowUrl.durationThird = lastRowUrl.durationThird+ (diff/60000);
+                            }
                         }
+                        user.totalDuration = (duration/60000); // convert back to minutes
                     } else {
                         diff = 0;
-                        user.totalDuration = (duration/60000)/60; // convert back to hours
                         duration = 0;
                     }
 
@@ -227,22 +374,27 @@
             var oldRow;
             var newRow;
             var newMrRow;
-            var user;
+            var user1;
+            var user2;
             for (i = 0; i < full_data.length; i++){
                 oldRow = full_data[i];
                 newRow = {};
                 newMrRow = {};
-                if(users[oldRow.StudentID]){
-                    user = users[oldRow.StudentID];
+                user1 = users[oldRow.StudentID + ":" + oldRow.CaseAssignment1];
+                user2 = users[oldRow.StudentID + ":" + oldRow.CaseAssignment3]
+                if(user1){
+                    newRow = {};
                     newRow.student = oldRow.StudentID;
-                    newRow.totalHits = user.totalHits;
-                    newRow.totalLow = user.totalLow;
-                    newRow.totalHigh= user.totalHigh;
-                    newRow.totalUniqueLow= user.totalUniqueLow;
-                    newRow.totalUniqueHigh= user.totalUniqueHigh;
-                    newRow.totalNoteLength= user.totalNoteLength;
-                    newRow.relevancyRatio = user.relevancyRatio;
-                    newRow.uniqueRelevancyRatio = user.uniqueRelevancyRatio;
+                    newRow.assignment = user1.assignment;
+                    newRow.first = user1.first;
+                    newRow.totalHits = user1.totalHits;
+                    newRow.totalLow = user1.totalLow;
+                    newRow.totalHigh= user1.totalHigh;
+                    newRow.totalUniqueLow= user1.totalUniqueLow;
+                    newRow.totalUniqueHigh= user1.totalUniqueHigh;
+                    newRow.totalNoteLength= user1.totalNoteLength;
+                    newRow.relevancyRatio = user1.relevancyRatio;
+                    newRow.uniqueRelevancyRatio = user1.uniqueRelevancyRatio;
                     newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
                     newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
                     newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
@@ -255,26 +407,101 @@
                         newRow.Step1QTotal = a + b + c;
                     }
                     newRow.TotalScore = oldRow.TotalScore;
+                    newRow.relSearch = oldRow.RelSearch_1;
+                    newRow.relIndex = oldRow.RelIndex_1;
+                    newRow.relNotes =  oldRow.RelNotes_1;
+                    newRow.relNotesIndex = oldRow.RelNotesIndex_1;
+                    newRow.pageComplexity = user1.pageComplexity;
+                    newRow.pageLength = user1.pageLength;
+                    newRow.pageSentiment = user1.pageSentiment;
+                    newRow.totalTime = user1.totalDuration;
+                    newRow.totalSessions = user1.totalSessions;
 
                     // Multiple regression list
+                    newMrRow = {};
                     newMrRow.student = oldRow.StudentID;
                     newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
                     newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
                     newMrRow.skillWithTech = oldRow.Pre10;
-                    newMrRow.totalHits = user.totalHits;
-                    newMrRow.totalSessions = user.totalSessions;
-                    newMrRow.totalTime = user.totalDuration;
+                    newMrRow.totalHits = user1.totalHits;
+                    newMrRow.totalSessions = user1.totalSessions;
+                    newMrRow.totalTime = user1.totalDuration;
                     newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
-                    newMrRow.relSearch = (oldRow.RelSearch_1 + oldRow.RelSearch_2 + oldRow.RelSearch_3) / 3;
-                    newMrRow.relIndex =  (oldRow.RelIndex_1 + oldRow.RelIndex_2 + oldRow.RelIndex_3) / 3;
-                    newMrRow.relNotes =  (oldRow.RelNotes_1 + oldRow.RelNotes_2 + oldRow.RelNotes_3) / 3;
-                    newMrRow.relNotesIndex =  (oldRow.RelNotesIndex_1 + oldRow.RelNotesIndex_2 + oldRow.RelNotesIndex_3) / 3;
-                    newMrRow.SE_Change = oldRow.SE_Diff;
+                    newMrRow.relSearch = oldRow.RelSearch_1;
+                    newMrRow.relIndex = oldRow.RelIndex_1;
+                    newMrRow.relNotes =  oldRow.RelNotes_1;
+                    newMrRow.relNotesIndex = oldRow.RelNotesIndex_1;
+                    newMrRow.noteLength = user1.totalNoteLength;
+                    newMrRow.noteLengthPerPAge = (user1.totalNoteLength > 0 ? user1.totalNoteLength : '0') / user1.totalHits;
+                    //newMrRow.SE_Change = oldRow.SE_Diff;
                     newMrRow.totalQ1 = newRow.Step1QTotal;
-
+                    newMrRow.pageComplexity = user1.pageComplexity;
+                    newMrRow.pageLength = user1.pageLength;
+                    newMrRow.pageSentiment = user1.pageSentiment;
+                    newUserData.push(newRow);
+                    mr_data.push(newMrRow);
                 }
-                newUserData.push(newRow);
-                mr_data.push(newMrRow);
+                if(user2){
+                    newRow = {};
+                    newRow.student = oldRow.StudentID;
+                    newRow.assignment = user2.assignment;
+                    newRow.first = user2.first;
+                    newRow.totalHits = user2.totalHits;
+                    newRow.totalLow = user2.totalLow;
+                    newRow.totalHigh= user2.totalHigh;
+                    newRow.totalUniqueLow= user2.totalUniqueLow;
+                    newRow.totalUniqueHigh= user2.totalUniqueHigh;
+                    newRow.totalNoteLength= user2.totalNoteLength;
+                    newRow.relevancyRatio = user2.relevancyRatio;
+                    newRow.uniqueRelevancyRatio = user2.uniqueRelevancyRatio;
+                    newRow.Step1Q1A = oldRow.Step1Q1A_3 < 98 ? oldRow.Step1Q1A_3 : 'NA';
+                    newRow.Step1Q1B = oldRow.Step1Q1B_3 < 98 ? oldRow.Step1Q1B_3 : 'NA';
+                    newRow.Step1Q1C = oldRow.Step1Q1C_3 < 98 ? oldRow.Step1Q1C_3 : 'NA';
+                    if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
+                        newRow.Step1QTotal = 'NA';
+                    } else {
+                        var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
+                        var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
+                        var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
+                        newRow.Step1QTotal = a + b + c;
+                    }
+                    newRow.TotalScore = oldRow.TotalScore_3;
+                    newRow.relSearch = oldRow.RelSearch_3;
+                    newRow.relIndex = oldRow.RelIndex_3;
+                    newRow.relNotes =  oldRow.RelNotes_3;
+                    newRow.relNotesIndex = oldRow.RelNotesIndex_3;
+                    newRow.pageComplexity = user2.pageComplexity;
+                    newRow.pageLength = user2.pageLength;
+                    newRow.pageSentiment = user2.pageSentiment;
+                    newRow.totalTime = user2.totalDuration;
+                    newRow.totalSessions = user2.totalSessions;
+
+
+                    // Multiple regression list
+                    newMrRow = {};
+                    newMrRow.student = oldRow.StudentID;
+                    newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
+                    newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
+                    newMrRow.skillWithTech = oldRow.Pre10;
+                    newMrRow.totalHits = user2.totalHits;
+                    newMrRow.totalSessions = user2.totalSessions;
+                    newMrRow.totalTime = user2.totalDuration;
+                    newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
+                    newMrRow.relSearch = oldRow.RelSearch_3;
+                    newMrRow.relIndex = oldRow.RelIndex_3;
+                    newMrRow.relNotes =  oldRow.RelNotes_3;
+                    newMrRow.relNotesIndex = oldRow.RelNotesIndex_3;
+                    newMrRow.noteLength = user2.totalNoteLength;
+                    newMrRow.noteLengthPerPAge = (user2.totalNoteLength > 0 ? user2.totalNoteLength : '0') / user2.totalHits;
+                    //newMrRow.SE_Change = oldRow.SE_Diff;
+                    newMrRow.totalQ1 = newRow.Step1QTotal;
+                    newMrRow.pageComplexity = user2.pageComplexity;
+                    newMrRow.pageLength = user2.pageLength;
+                    newMrRow.pageSentiment = user2.pageSentiment;
+
+                    newUserData.push(newRow);
+                    mr_data.push(newMrRow);
+                }
 
             }
             console.log('New: ', newUserData);
@@ -282,6 +509,25 @@
 
             outputCSV(newUserData);
         }
+
+        function printPageMetrics () {
+            var arr = [];
+            Object.keys(page_index).forEach(function(key, index, array) {
+                var value = page_index[key];
+                arr.push(value);
+            })
+            outputCSV(arr, true);
+        }
+
+        function printTargetMetrics () {
+            target_data = [];
+            Object.keys(target_index).forEach(function(key, index, array) {
+                var value = target_index[key];
+                target_data.push(value);
+            })
+            outputCSV(target_data, true);
+        }
+
 
         function buildPageData () {
             var urlList = [];
@@ -291,40 +537,44 @@
             var o, m, n;
             for (i = 0; i < full_click_track.length; i++) {
                 o = full_click_track[i];
-                var student = o.student;
+                var student = o.student + ':' + o.assignment;
                 var url = o.url;
                 // If student object doesn't exit, create it
                 if(!tempPageData[student]){
                     tempPageData[student] = {
-                        student : student
+                        student : o.student,
+                        assignment : o.assignment,
+                        first : o.first
                     };
                 }
                 // Add web page count to the student object
+                var duration = o.duration > 0 ? o.duration : 0;
                 var studentData = tempPageData[student];
                 if(!studentData[url]){
-                    studentData[url] = 1;
+                    studentData[url] = duration;
                 } else {
-                    studentData[url]++;
+                    studentData[url] = studentData[url] + duration;
                 }
+
 
                 // Add to unique url list to build 0 columns later
                 var urlListIndex = urlList.indexOf(url);
                 if( urlListIndex === -1 ){
                     var newIndex = urlList.push(url);
-                    urlListCounts[newIndex-1] = 1;
+                    urlListCounts[newIndex-1] = duration;
                 } else {
-                    urlListCounts[urlListIndex]++;
+                    urlListCounts[urlListIndex] = urlListCounts[urlListIndex] + duration;
                 }
             }
             // Add score total to object
-            for(k = 0; k < full_data.length; k++){
-                n = full_data[k];
-                if(tempPageData[n.StudentID]){
+            for(k = 0; k < newUserData.length; k++){
+                n = newUserData[k];
+                if(tempPageData[n.student + ':' + n.assignment]){
                     var Step1Q1A = n.Step1Q1A < 98 ? n.Step1Q1A : 0;
                     var Step1Q1B = n.Step1Q1B < 98 ? n.Step1Q1B : 0;
                     var Step1Q1C = n.Step1Q1C < 98 ? n.Step1Q1C : 0;
                     var totalScores = Step1Q1A + Step1Q1B + Step1Q1C;
-                    tempPageData[n.StudentID].score = totalScores;
+                    tempPageData[n.student + ':' + n.assignment].score = totalScores;
                 }
             }
 
@@ -340,10 +590,35 @@
             })
 
             console.log(urlListCounts);
+
             outputCSV(page_data);
         }
 
-        function outputCSV (data) {
+//        function getUniqueIDs () {
+//            var i;
+//            var ids = [];
+//            var o;
+//            for(i= 0; i < full_click_track.length; i++) {
+//                o = full_click_track[i];
+//                if(ids.indexOf(o.assignment) === -1){
+//                    ids.push(o.assignment)
+//                }
+//            }
+//            return ids;
+//        }
+
+        var buildSankeyString = function(){
+            var string = "";
+            target_data.forEach(function(item){
+                if(item.to === 'exit') {
+                    string += "['" + item.from + "', '" + item.to + "-2'," + item.count + "],";
+                }
+            })
+            return string;
+        }
+
+
+        function outputCSV (data, ignoreStudent) {
             var i;
             var row;
             var text = '';
@@ -352,7 +627,7 @@
             var comma = '';
             for (i = 0; i < data.length; i++) {
                 row = data[i];
-                if (!row.student){
+                if (!ignoreStudent && !row.student){
                     continue;
                 }
                 Object.keys(row).forEach(function(key, index, array) {
@@ -380,15 +655,20 @@
             $('#btnLoad').click(function(){
                 getFullData();
                 getLogs();
+                getPageMetrics();
             });
             $('#btnReset').click(function(){
                 reset();
             });
             $('#btnCor').click(function(){
+                reformatClickData();
                 refactorLogstoStudents();
             });
             $('#btnPage').click(function(){
                 buildPageData();
+            });
+            $('#btnMetrics').click(function(){
+                printPageMetrics();
             });
             $('#btnMR').click(function(){
                 if(mr_data.length === 0){

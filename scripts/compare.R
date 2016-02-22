@@ -1,0 +1,5 @@
+compare <- read.csv("~/Projects/thesis/csv/compare1-3.csv")
+t.test(compare$thirdUnique,compare$firstUnique,paired=TRUE)
+t.test(compare$thirdUnique,compare$firstUnique,paired=TRUE)
+t.test(compare$thirdTime,compare$firstTime,paired=TRUE)
+t.test(compare$thirdSession,compare$firstSession,paired=TRUE)
