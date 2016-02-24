@@ -63,6 +63,7 @@
                         <button id="btnPage" class="btn btn-sm btn-default  ">Build Page Data</button>
                         <button id="btnMR" class="btn btn-sm btn-default  ">Build Multiple Reg Data</button>
                         <button id="btnMetrics" class="btn btn-sm btn-default  ">Print Page Metrics</button>
+                        <button id="btnRatios" class="btn btn-sm btn-default  ">Print User Relevant Ratios</button>
 
                         <button id="saveCSV" class="btn btn-sm btn-default  ">Save CSV</button>
                     </div>
@@ -96,6 +97,7 @@
         var mr_data = [];
         var target_index = {};
         var target_data = [];
+        var relevant_ratio_change = {};
 
         function log (text, type) {
             lineNumber++;
@@ -262,6 +264,7 @@
                         pageLength:0,
                         pageSentiment:0,
                         readTimeDifference:0, // Difference between expected read time and duration
+                        relevantRatioChange : [row.student, row.assignment],
                         temp : {
                             usedURLs : [],
                             uniqueUsedUrl : [],
@@ -338,8 +341,7 @@
 
                 user.totalHits++;
 
-
-
+                user.relevantRatioChange.push(user.totalHigh/user.totalHits);
 
 
                 // Calculate Sessions
@@ -391,6 +393,16 @@
             buildUserData();
         }
 
+        function printUserRelevantRatio ( ){
+            var arr = [];
+            Object.keys(users).forEach(function(key, index, array) {
+                var person = users[key];
+
+                arr.push(person.relevantRatioChange);
+            })
+            outputCSV(arr, true);
+        }
+
         function buildUserData (){
             var i;
             var oldRow;
@@ -402,131 +414,72 @@
                 oldRow = full_data[i];
                 newRow = {};
                 newMrRow = {};
-                user1 = users[oldRow.StudentID + ":" + oldRow.CaseAssignment1];
-                user2 = users[oldRow.StudentID + ":" + oldRow.CaseAssignment3]
-                if(user1){
-                    newRow = {};
-                    newRow.student = oldRow.StudentID;
-                    newRow.assignment = user1.assignment;
-                    newRow.first = user1.first;
-                    newRow.totalHits = user1.totalHits;
-                    newRow.totalLow = user1.totalLow;
-                    newRow.totalHigh= user1.totalHigh;
-                    newRow.totalUniqueLow= user1.totalUniqueLow;
-                    newRow.totalUniqueHigh= user1.totalUniqueHigh;
-                    newRow.totalNoteLength= user1.totalNoteLength;
-                    newRow.relevancyRatio = user1.relevancyRatio;
-                    newRow.uniqueRelevancyRatio = user1.uniqueRelevancyRatio;
-                    newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
-                    newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
-                    newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
-                    if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
-                        newRow.Step1QTotal = 'NA';
+                for(var s = 1; s < 4; s++){
+                    var u = users[oldRow.StudentID + ":" + oldRow['CaseAssignment' + s]];
+                    if(u){
+                        newRow = {};
+                        newRow.student = oldRow.StudentID;
+                        newRow.assignment = u.assignment;
+                        newRow.first = u.first;
+                        newRow.totalHits = u.totalHits;
+                        newRow.totalLow = u.totalLow;
+                        newRow.totalHigh= u.totalHigh;
+                        newRow.totalUniqueLow= u.totalUniqueLow;
+                        newRow.totalUniqueHigh= u.totalUniqueHigh;
+                        newRow.totalNoteLength= u.totalNoteLength;
+                        newRow.relevancyRatio = u.relevancyRatio;
+                        newRow.uniqueRelevancyRatio = u.uniqueRelevancyRatio;
+                        newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
+                        newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
+                        newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
+                        if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
+                            newRow.Step1QTotal = 'NA';
+                        } else {
+                            var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
+                            var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
+                            var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
+                            newRow.Step1QTotal = a + b + c;
+                        }
+                        newRow.TotalScore = oldRow.TotalScore;
+                        newRow.relSearch = oldRow.RelSearch_1;
+                        newRow.relIndex = oldRow.RelIndex_1;
+                        newRow.relNotes =  oldRow.RelNotes_1;
+                        newRow.relNotesIndex = oldRow.RelNotesIndex_1;
+                        newRow.pageComplexity = u.pageComplexity;
+                        newRow.pageLength = u.pageLength;
+                        newRow.pageSentiment = u.pageSentiment;
+                        newRow.totalTime = u.totalDuration;
+                        newRow.totalSessions = u.totalSessions;
+
+                        // Multiple regression list
+                        newMrRow = {};
+                        newMrRow.student = oldRow.StudentID;
+                        newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
+                        newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
+                        newMrRow.skillWithTech = oldRow.Pre10;
+                        newMrRow.totalHits = u.totalHits;
+                        newMrRow.totalSessions = u.totalSessions;
+                        newMrRow.totalTime = u.totalDuration;
+                        newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
+                        newMrRow.relSearch = oldRow.RelSearch_1;
+                        newMrRow.relIndex = oldRow.RelIndex_1;
+                        newMrRow.relNotes =  oldRow.RelNotes_1;
+                        newMrRow.relNotesIndex = oldRow.RelNotesIndex_1;
+                        newMrRow.noteLength = u.totalNoteLength;
+                        newMrRow.noteLengthPerPAge = (u.totalNoteLength > 0 ? u.totalNoteLength : '0') / u.totalHits;
+                        //newMrRow.SE_Change = oldRow.SE_Diff;
+                        newMrRow.totalQ1 = newRow.Step1QTotal;
+                        newMrRow.pageComplexity = u.pageComplexity;
+                        newMrRow.pageLength = u.pageLength;
+                        newMrRow.pageSentiment = u.pageSentiment;
+                        newMrRow.BeforeSub = oldRow.BeforeSub;
+                        newMrRow.preSeTotal = oldRow.Pre_SE1 + oldRow.Pre_SE2 +oldRow.Pre_SE3 +oldRow.Pre_SE4 +oldRow.Pre_SE5 +oldRow.Pre_SE6 +oldRow.Pre_SE7 +oldRow.Pre_SE8 +oldRow.Pre_SE9 +oldRow.Pre_SE10 +oldRow.Pre_SE11 + oldRow.Pre_SE12;
+
+                        newUserData.push(newRow);
+                        mr_data.push(newMrRow); 
                     } else {
-                        var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
-                        var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
-                        var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
-                        newRow.Step1QTotal = a + b + c;
+                        console.log(s, 'NO: ' + oldRow.StudentID + ":" + oldRow['CaseAssignment' + s])
                     }
-                    newRow.TotalScore = oldRow.TotalScore;
-                    newRow.relSearch = oldRow.RelSearch_1;
-                    newRow.relIndex = oldRow.RelIndex_1;
-                    newRow.relNotes =  oldRow.RelNotes_1;
-                    newRow.relNotesIndex = oldRow.RelNotesIndex_1;
-                    newRow.pageComplexity = user1.pageComplexity;
-                    newRow.pageLength = user1.pageLength;
-                    newRow.pageSentiment = user1.pageSentiment;
-                    newRow.totalTime = user1.totalDuration;
-                    newRow.totalSessions = user1.totalSessions;
-
-                    // Multiple regression list
-                    newMrRow = {};
-                    newMrRow.student = oldRow.StudentID;
-                    newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
-                    newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
-                    newMrRow.skillWithTech = oldRow.Pre10;
-                    newMrRow.totalHits = user1.totalHits;
-                    newMrRow.totalSessions = user1.totalSessions;
-                    newMrRow.totalTime = user1.totalDuration;
-                    newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
-                    newMrRow.relSearch = oldRow.RelSearch_1;
-                    newMrRow.relIndex = oldRow.RelIndex_1;
-                    newMrRow.relNotes =  oldRow.RelNotes_1;
-                    newMrRow.relNotesIndex = oldRow.RelNotesIndex_1;
-                    newMrRow.noteLength = user1.totalNoteLength;
-                    newMrRow.noteLengthPerPAge = (user1.totalNoteLength > 0 ? user1.totalNoteLength : '0') / user1.totalHits;
-                    //newMrRow.SE_Change = oldRow.SE_Diff;
-                    newMrRow.totalQ1 = newRow.Step1QTotal;
-                    newMrRow.pageComplexity = user1.pageComplexity;
-                    newMrRow.pageLength = user1.pageLength;
-                    newMrRow.pageSentiment = user1.pageSentiment;
-                    newMrRow.BeforeSub = oldRow.BeforeSub;
-                    newMrRow.preSeTotal = oldRow.Pre_SE1 + oldRow.Pre_SE2 +oldRow.Pre_SE3 +oldRow.Pre_SE4 +oldRow.Pre_SE5 +oldRow.Pre_SE6 +oldRow.Pre_SE7 +oldRow.Pre_SE8 +oldRow.Pre_SE9 +oldRow.Pre_SE10 +oldRow.Pre_SE11 + oldRow.Pre_SE12;
-
-                    newUserData.push(newRow);
-                    mr_data.push(newMrRow);
-                }
-                if(user2){
-                    newRow = {};
-                    newRow.student = oldRow.StudentID;
-                    newRow.assignment = user2.assignment;
-                    newRow.first = user2.first;
-                    newRow.totalHits = user2.totalHits;
-                    newRow.totalLow = user2.totalLow;
-                    newRow.totalHigh= user2.totalHigh;
-                    newRow.totalUniqueLow= user2.totalUniqueLow;
-                    newRow.totalUniqueHigh= user2.totalUniqueHigh;
-                    newRow.totalNoteLength= user2.totalNoteLength;
-                    newRow.relevancyRatio = user2.relevancyRatio;
-                    newRow.uniqueRelevancyRatio = user2.uniqueRelevancyRatio;
-                    newRow.Step1Q1A = oldRow.Step1Q1A_3 < 98 ? oldRow.Step1Q1A_3 : 'NA';
-                    newRow.Step1Q1B = oldRow.Step1Q1B_3 < 98 ? oldRow.Step1Q1B_3 : 'NA';
-                    newRow.Step1Q1C = oldRow.Step1Q1C_3 < 98 ? oldRow.Step1Q1C_3 : 'NA';
-                    if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
-                        newRow.Step1QTotal = 'NA';
-                    } else {
-                        var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
-                        var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
-                        var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
-                        newRow.Step1QTotal = a + b + c;
-                    }
-                    newRow.TotalScore = oldRow.TotalScore_3;
-                    newRow.relSearch = oldRow.RelSearch_3;
-                    newRow.relIndex = oldRow.RelIndex_3;
-                    newRow.relNotes =  oldRow.RelNotes_3;
-                    newRow.relNotesIndex = oldRow.RelNotesIndex_3;
-                    newRow.pageComplexity = user2.pageComplexity;
-                    newRow.pageLength = user2.pageLength;
-                    newRow.pageSentiment = user2.pageSentiment;
-                    newRow.totalTime = user2.totalDuration;
-                    newRow.totalSessions = user2.totalSessions;
-
-
-                    // Multiple regression list
-                    newMrRow = {};
-                    newMrRow.student = oldRow.StudentID;
-                    newMrRow.yearsTaught = oldRow.Pre3_0809; // Number of years as teacher
-                    newMrRow.yearsAdmin = oldRow.Pre4_0809 === '#NULL!' ? 0 : oldRow.Pre4_0809 ; // Number of years as administrator
-                    newMrRow.skillWithTech = oldRow.Pre10;
-                    newMrRow.totalHits = user2.totalHits;
-                    newMrRow.totalSessions = user2.totalSessions;
-                    newMrRow.totalTime = user2.totalDuration;
-                    newMrRow.averageTime = newMrRow.totalTime / newMrRow.totalSessions;
-                    newMrRow.relSearch = oldRow.RelSearch_3;
-                    newMrRow.relIndex = oldRow.RelIndex_3;
-                    newMrRow.relNotes =  oldRow.RelNotes_3;
-                    newMrRow.relNotesIndex = oldRow.RelNotesIndex_3;
-                    newMrRow.noteLength = user2.totalNoteLength;
-                    newMrRow.noteLengthPerPAge = (user2.totalNoteLength > 0 ? user2.totalNoteLength : '0') / user2.totalHits;
-                    //newMrRow.SE_Change = oldRow.SE_Diff;
-                    newMrRow.totalQ1 = newRow.Step1QTotal;
-                    newMrRow.pageComplexity = user2.pageComplexity;
-                    newMrRow.pageLength = user2.pageLength;
-                    newMrRow.pageSentiment = user2.pageSentiment;
-                    newMrRow.BeforeSub = oldRow.BeforeSub;
-                    newMrRow.preSeTotal = oldRow.Pre_SE1 + oldRow.Pre_SE2 +oldRow.Pre_SE3 +oldRow.Pre_SE4 +oldRow.Pre_SE5 +oldRow.Pre_SE6 +oldRow.Pre_SE7 +oldRow.Pre_SE8 +oldRow.Pre_SE9 +oldRow.Pre_SE10 +oldRow.Pre_SE11 + oldRow.Pre_SE12;
-                    newUserData.push(newRow);
-                    mr_data.push(newMrRow);
                 }
 
             }
@@ -577,9 +530,9 @@
                 var duration = o.duration > 0 ? o.duration : 0;
                 var studentData = tempPageData[student];
                 if(!studentData[url]){
-                    studentData[url] = duration;
+                    studentData[url] = 1;
                 } else {
-                    studentData[url] = studentData[url] + duration;
+                    studentData[url]++;
                 }
 
 
@@ -616,6 +569,7 @@
             })
 
             console.log(urlListCounts);
+            // Make score contribution calculations and then add to page metrics
 
             outputCSV(page_data);
         }
@@ -632,6 +586,8 @@
 //            }
 //            return ids;
 //        }
+
+
 
         var buildSankeyString = function(){
             var string = "";
@@ -695,6 +651,9 @@
             });
             $('#btnMetrics').click(function(){
                 printPageMetrics();
+            });
+            $('#btnRatios').click(function(){
+                printUserRelevantRatio();
             });
             $('#btnMR').click(function(){
                 if(mr_data.length === 0){
