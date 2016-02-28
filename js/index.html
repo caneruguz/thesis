@@ -408,8 +408,6 @@
             var oldRow;
             var newRow;
             var newMrRow;
-            var user1;
-            var user2;
             for (i = 0; i < full_data.length; i++){
                 oldRow = full_data[i];
                 newRow = {};
@@ -429,22 +427,53 @@
                         newRow.totalNoteLength= u.totalNoteLength;
                         newRow.relevancyRatio = u.relevancyRatio;
                         newRow.uniqueRelevancyRatio = u.uniqueRelevancyRatio;
-                        newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
-                        newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
-                        newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
-                        if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
-                            newRow.Step1QTotal = 'NA';
-                        } else {
-                            var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
-                            var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
-                            var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
-                            newRow.Step1QTotal = a + b + c;
+                        if(s === 1){
+                            newRow.Step1Q1A = oldRow.Step1Q1A < 98 ? oldRow.Step1Q1A : 'NA';
+                            newRow.Step1Q1B = oldRow.Step1Q1B < 98 ? oldRow.Step1Q1B : 'NA';
+                            newRow.Step1Q1C = oldRow.Step1Q1C < 98 ? oldRow.Step1Q1C : 'NA';
+                            newRow.relSearch = oldRow.RelSearch_1;
+                            newRow.relIndex = oldRow.RelIndex_1;
+                            newRow.relNotes =  oldRow.RelNotes_1;
+                            newRow.relNotesIndex = oldRow.RelNotesIndex_1;
+                            if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
+                                newRow.Step1QTotal = 'NA';
+                            } else {
+                                var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
+                                var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
+                                var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
+                                newRow.Step1QTotal = a + b + c;
+                            }
                         }
+                        if(s === 3){
+                            newRow.Step1Q1A = oldRow.Step1Q1A_3 < 98 ? oldRow.Step1Q1A_3 : 'NA';
+                            newRow.Step1Q1B = oldRow.Step1Q1B_3 < 98 ? oldRow.Step1Q1B_3 : 'NA';
+                            newRow.Step1Q1C = oldRow.Step1Q1C_3 < 98 ? oldRow.Step1Q1C_3 : 'NA';
+                            newRow.relSearch = oldRow.RelSearch_3;
+                            newRow.relIndex = oldRow.RelIndex_3;
+                            newRow.relNotes =  oldRow.RelNotes_3;
+                            newRow.relNotesIndex = oldRow.RelNotesIndex_3;
+                            if(newRow.Step1Q1C === 'NA' && newRow.Step1Q1B  === 'NA' && newRow.Step1Q1A  === 'NA' ){
+                                newRow.Step1QTotal = 'NA';
+                            } else {
+                                var a = newRow.Step1Q1A === 'NA' ? 0 : newRow.Step1Q1A;
+                                var b = newRow.Step1Q1B === 'NA' ? 0 : newRow.Step1Q1B;
+                                var c = newRow.Step1Q1C === 'NA' ? 0 : newRow.Step1Q1C;
+                                newRow.Step1QTotal = a + b + c;
+                            }
+                        }
+                        if(s === 2){
+                            newRow.Step1Q1A = 'NA';
+                            newRow.Step1Q1B = 'NA';
+                            newRow.Step1Q1C = 'NA';
+                            newRow.relSearch = 'NA';
+                            newRow.relIndex = 'NA';
+                            newRow.relNotes =  'NA';
+                            newRow.relNotesIndex = 'NA';
+                            newRow.Step1QTotal = 'NA';
+                        }
+
                         newRow.TotalScore = oldRow.TotalScore;
-                        newRow.relSearch = oldRow.RelSearch_1;
-                        newRow.relIndex = oldRow.RelIndex_1;
-                        newRow.relNotes =  oldRow.RelNotes_1;
-                        newRow.relNotesIndex = oldRow.RelNotesIndex_1;
+
                         newRow.pageComplexity = u.pageComplexity;
                         newRow.pageLength = u.pageLength;
                         newRow.pageSentiment = u.pageSentiment;
@@ -512,6 +541,7 @@
             var urlList = [];
             var urlListCounts = [];
             var tempPageData = {};
+            page_data = [];
             var i, j, k;
             var o, m, n;
             for (i = 0; i < full_click_track.length; i++) {
@@ -523,7 +553,8 @@
                     tempPageData[student] = {
                         student : o.student,
                         assignment : o.assignment,
-                        first : o.first
+                        first : o.first,
+                        totalPages : 0
                     };
                 }
                 // Add web page count to the student object
@@ -534,6 +565,7 @@
                 } else {
                     studentData[url]++;
                 }
+                studentData.totalPages++;
 
 
                 // Add to unique url list to build 0 columns later
@@ -549,11 +581,7 @@
             for(k = 0; k < newUserData.length; k++){
                 n = newUserData[k];
                 if(tempPageData[n.student + ':' + n.assignment]){
-                    var Step1Q1A = n.Step1Q1A < 98 ? n.Step1Q1A : 0;
-                    var Step1Q1B = n.Step1Q1B < 98 ? n.Step1Q1B : 0;
-                    var Step1Q1C = n.Step1Q1C < 98 ? n.Step1Q1C : 0;
-                    var totalScores = Step1Q1A + Step1Q1B + Step1Q1C;
-                    tempPageData[n.student + ':' + n.assignment].score = totalScores;
+                    tempPageData[n.student + ':' + n.assignment].score = n.Step1QTotal;
                 }
             }
 
@@ -565,11 +593,25 @@
                         value[m] = 0;
                     }
                 }
+
                 page_data.push(value);
             })
 
             console.log(urlListCounts);
             // Make score contribution calculations and then add to page metrics
+            var page_data_scores = [];
+            page_data.forEach(function(page){
+                var thispage = page;
+                Object.keys(thispage).forEach(function(key, index, array) {
+                    if(key !== 'student' && key !== 'assignment' && key !== 'first' && key !== 'totalPages' && key !== 'score'){
+                        if (page['totalPages'] === 0){
+                            page[key] = 0;
+                        }else {
+                            page[key] = page[key]/page['totalPages']*page['score'];
+                        }
+                    }
+                })
+            });
 
             outputCSV(page_data);
         }
@@ -605,26 +647,36 @@
             var row;
             var text = '';
             var header = '';
-            var headerDone = false;
             var comma = '';
+            var keyOrder = [];
+            var keyOrderDone = false;
             for (i = 0; i < data.length; i++) {
                 row = data[i];
                 if (!ignoreStudent && !row.student){
                     continue;
                 }
-                Object.keys(row).forEach(function(key, index, array) {
+                // get key order from first one
+                if(!keyOrderDone){
+                    Object.keys(row).forEach(function(key, index, array) {
+                        keyOrder.push(key);
+                        if(index === 0){
+                            comma = '';
+                        } else {
+                            comma = ',';
+                        }
+                        header += comma + key;
+                    });
+                    keyOrderDone = true;
+                }
+                keyOrder.forEach(function(key, index){
                     var value = row[key];
                     if(index === 0){
                         comma = '';
                     } else {
                         comma = ',';
                     }
-                    if(!headerDone){
-                        header += comma + key;
-                    }
                     text += comma + value;
-                });
-                headerDone = true;
+                })
                 text += ('\n');
             }
             $('.output').html(header + '\n' + text);
